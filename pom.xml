@@ -76,7 +76,6 @@
             </executions>
         </plugin>
       
-      
     </plugins>
   </build>
   <properties> 
@@ -84,12 +83,25 @@
 	  <spring.version>5.1.2.RELEASE</spring.version>
 	  <junit.version>4.11</junit.version>
 	  <log4j.version>1.2.17</log4j.version>
-	  <sonar.host.url>http://65.2.151.216:9000</sonar.host.url>
-	  <sonar.login>admin</sonar.login>
-	  <sonar.password>admin</sonar.password>
+	  <sonar.host.url>http://172.31.95.154:9000/</sonar.host.url>
+	  <sonar.login>sqa_a6dbfa05b043baf40235c3d4ca169d9660f3d078</sonar.login>
 	  <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	  <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-  	  <maven.compiler.source>1.8</maven.compiler.source>
+  	  <groupId>org.sonarsource.scanner.maven</groupId>
+      <artifactId>sonar-maven-plugin</artifactId>
+      <version>3.9.1.2184</version>
+      <configuration>
+        <sonar.java.binaries>target/classes</sonar.java.binaries>
+      </configuration>  <plugins>
+    <plugin>
+      <groupId>org.sonarsource.scanner.maven</groupId>
+      <artifactId>sonar-maven-plugin</artifactId>
+      <version>3.9.1.2184</version>
+      <configuration>
+        <sonar.java.binaries>target/classes</sonar.java.binaries>
+      </configuration>
+    </plugin>
+  </plugins>maven.compiler.source>1.8</maven.compiler.source>
  	  <maven.compiler.target>1.8</maven.compiler.target>
   </properties>
 </project>
